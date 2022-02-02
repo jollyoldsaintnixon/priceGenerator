@@ -1,7 +1,10 @@
+## Instructions
+After cloning, run `npm install` and then `npm start`
+
 TODO
 * slide transition
-    * slide to slide
-    * slide to submit
-* button css
-    * <a href="https://www.flaticon.com/free-icons/arrows" title="arrows icons">Arrows icons created by Pixel perfect - Flaticon</a>
+    * to slide
+    * to submit
+* progress tracker
+* background?
     
