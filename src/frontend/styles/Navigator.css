@@ -1,15 +1,37 @@
 .button {
     margin: 10px;
     border: 2px black;
+
 }
 
 .unlocked {
-    color: blue;
+    color: #08a6f0;
+    box-shadow: 0 9px 16px 0 #bae5fb;
 }
 
-.input {
-    width: fit-content;
-    padding: 2px;
+.navigator {
     margin: 10px;
-    font-family: 'Open Sans', sans-serif;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.material-icons {
+    color: gray;
+    font-size: 50px;
+    }
+
+.submit {
+    padding: 16px 0;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: .64px;
+    border-radius: 25.5px;
+    background-color: gray;
+    width: 148px;
+}
+
+.submit.unlocked {
+    background-color: #08a6f0;
+    /* box-shadow: 0 9px 16px 0 #bae5fb; */
 }

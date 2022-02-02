@@ -2,6 +2,7 @@ const VEHICLE = 'vehicle'
 const UNITS = 'units'
 const RATE = 'rate'
 const AMOUNT = 'amount'
+const SUBMIT = 'submit'
 
 const CHARTER = "Charter"
 const MINIBUS = "Mini Bus"
@@ -16,55 +17,56 @@ const DAILY = "Daily"
 const HOURLY = "Hourly"
 const DISTANCE = "Distance"
 
-const SLIDES = [VEHICLE, AMOUNT, RATE, UNITS]
+const SLIDES = [VEHICLE, AMOUNT, RATE, UNITS, SUBMIT]
 const VEHICLES = [CHARTER, MINIBUS, SPRINTER, PARTYBUS, SEDAN, SUV, LIMOUSINE, TROLLEY]
 const RATES = [DAILY, HOURLY, DISTANCE]
 
 
 const PRICE_SHEET = {
-    CHARTER: {
-        DAILY: 1000,
-        HOURLY: 400,
-        DISTANCE: 3.5,
+    "Charter": {
+        "Daily": 1000,
+        "Hourly": 400,
+        "Distance": 3.5,
     },
-    MINIBUS: {
-        DAILY: 925,
-        HOURLY: 360,
-        DISTANCE: 3.25,
+    "Mini Bus": {
+        "Daily": 925,
+        "Hourly": 360,
+        "Distance": 3.25,
     },
-    SPRINTER: {
-        DAILY: 850,
-        HOURLY: 320,
-        DISTANCE: 3,
+    "Sprinter": {
+        "Daily": 850,
+        "Hourly": 320,
+        "Distance": 3,
     },
-    PARTYBUS: {
-        DAILY: 775,
-        HOURLY: 280,
-        DISTANCE: 2.75,
+    "Party Bus": {
+        "Daily": 775,
+        "Hourly": 280,
+        "Distance": 2.75,
     },
-    SEDAN: {
-        DAILY: 700,
-        HOURLY: 240,
-        DISTANCE: 2.5,
+    "Sedan": {
+        "Daily": 700,
+        "Hourly": 240,
+        "Distance": 2.5,
     },
-    SUV: {
-        DAILY: 625,
-        HOURLY: 200,
-        DISTANCE: 2.25,
+    "SUV": {
+        "Daily": 625,
+        "Hourly": 200,
+        "Distance": 2.25,
     },
-    LIMOUSINE: {
-        DAILY: 550,
-        HOURLY: 160,
-        DISTANCE: 2,
+    "Limousine": {
+        "Daily": 550,
+        "Hourly": 160,
+        "Distance": 2,
     },
-    TROLLEY: {
-        DAILY: 475,
-        HOURLY: 120,
-        DISTANCE: 1.75,
+    "Trolley": {
+        "Daily": 475,
+        "Hourly": 120,
+        "Distance": 1.75,
     },
 }
 
-export {SLIDES, VEHICLES, RATES, PRICE_SHEET, VEHICLE, UNITS, RATE, AMOUNT, 
+export {SLIDES, VEHICLES, RATES, PRICE_SHEET, 
+    VEHICLE, UNITS, RATE, AMOUNT, SUBMIT,
     CHARTER, MINIBUS, SPRINTER, PARTYBUS, SEDAN, SUV, LIMOUSINE, TROLLEY,
     DAILY, HOURLY, DISTANCE,
 }

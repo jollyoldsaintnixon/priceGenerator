@@ -5,6 +5,7 @@ import Navigator from "./Navigator.jsx";
 import RateSlide from "./RateSlide"
 import AmountSlide from "./AmountSlide.jsx";
 import UnitsSlide from "./UnitsSlide.jsx";
+import SubmitSlide from "./SubmitSlide.jsx";
 
 export default class OuterFrame extends React.Component {
     constructor(props) {
@@ -41,6 +42,8 @@ export default class OuterFrame extends React.Component {
                 return <RateSlide itemList={Data.RATES} selectedRate={selectedRate} selectedVehicle={selectedVehicle} selectedAmount={selectedAmount} onSelect={this.handleSelectRate}></RateSlide>
             case Data.UNITS:
                 return <UnitsSlide itemList={Data.VEHICLES} selectedUnits={selectedUnits} selectedRate={selectedRate} selectedVehicle={selectedVehicle} onSelect={this.handleSelectUnits}></UnitsSlide>
+            case Data.SUBMIT:
+                return <SubmitSlide selectedVehicle={selectedVehicle} selectedAmount={selectedAmount} selectedRate={selectedRate} selectedUnits={selectedUnits} />
         }
     }
 
@@ -52,19 +55,18 @@ export default class OuterFrame extends React.Component {
         }
     }
 
-    handleNext(e) {     
+    handleNext(e) {  
         e.preventDefault()
         const { slideNum } = this.state
-        const max = Data.SLIDES.length - 1
+        const max = Data.SLIDES.length - 2 // because I added submit as a slide type
         if (slideNum < max) { // we can go forward
             this.setState({slideNum: slideNum+1})
         }
     }
     
     handleSubmit(e) {
-        e.preventDefault()
-            console.log("we were ready")
-        
+        const slideNum = Data.SLIDES.length - 1 // last one is submit
+        this.setState({slideNum})
     }
     
     handleSelectVehicle(e) {
@@ -95,14 +97,13 @@ export default class OuterFrame extends React.Component {
         this.slide = this.chooseSlide()
         const { slideNum, selectedVehicle, selectedAmount, selectedRate, selectedUnits } = this.state
         return (
-            <div className={"outer-frame"}>
+            <div className="outer-frame">
                 <p className="headline">Get a free quote!</p>
-                {this.slide}
-                <Navigator onBack={this.handleBack} onNext={this.handleNext} onSubmit={this.handleSubmit} 
-                    ready={this.ready}  outerState={this.state}
-                    // slideNum={slideNum} selectedVehicle={selectedVehicle} 
-                    // selectedAmount={selectedAmount} selectedRate={selectedRate} selectedUnits={selectedUnits}
-                    ></Navigator>
+                <div className="inner-frame">
+                    {this.slide}
+                    <Navigator onBack={this.handleBack} onNext={this.handleNext} onSubmit={this.handleSubmit} 
+                        ready={this.ready}  outerState={this.state} />
+                </div>
             </div>
         )
     }

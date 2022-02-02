@@ -3,8 +3,39 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    background-color: #fff;
+    border-radius: 4px;
+    max-width: 400px;
+    margin: 10% auto;
+    height: 100px;
+    position: relative;
+    padding: 34px;
 }
 
-.dropdown-select {
+.submit-headline {
+    font-size: xxx-large;
+    color: #08a6f0;
+    margin-bottom: 30px;
+}
 
+.input {
+    font-size: 20px;
+    text-align: center;
+    width: 150px;
+    padding: 2px;
+    margin: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.input.dropdown-select {
+    width: 157px;
+}
+
+.null-option {
+    font-style: italic;
+    color: gray;
+}
+
+.slide-headline {
+    margin: 30px;
 }

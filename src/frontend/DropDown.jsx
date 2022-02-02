@@ -7,8 +7,8 @@ export default class DropDown extends React.Component {
 
     render() {
         return (
-            <select className="input dropdown-select" value={this.props.selectedItem} onChange={(e) => this.props.onSelect(e)}>
-                <option disabled selected value={null} key={-1}> -- select an option -- </option>
+            <select className="input dropdown-select" value={this.props.selectedItem} autoFocus onChange={(e) => this.props.onSelect(e)}>
+                <option className="null-option" disabled selected value={null} key={-1}> --select one-- </option>
                 {this.props.itemList.map((item, i) => <option className="dropdown-option" value={item} key={i} >{item}</option>)}
             </select>
         )
