@@ -1,7 +1,7 @@
 ## Instructions
 After cloning, run `npm install` and then `npm start`
 
-TODO
+### TODO
 * slide transition
     * to slide
     * to submit

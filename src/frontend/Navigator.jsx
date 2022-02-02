@@ -45,14 +45,16 @@ export default class Navigator extends React.Component {
     render() {
         const unlockedBack = this.unlockBack()
         const unlockedBackColor = unlockedBack ? "#08a6f0" : "gray"
+        const unlockedBackClass = unlockedBack ? " unlocked" : ""
         const unlockedNext = this.unlockNext()
         const unlockedNextColor = unlockedNext ? "#08a6f0" : "gray"
+        const unlockedNextClass = unlockedNext ? " unlocked" : ""
         const ready = this.checkReady()
         const readyClass = ready ? " unlocked" : ""
         return (
             <div className="navigator">
             
-                <a className={"button prev"} onClick={(e) => {
+                <a className={"button prev" + unlockedBackClass} onClick={(e) => {
                         if (unlockedBack) {
                         return this.props.onBack(e)
                         } return
@@ -63,7 +65,7 @@ export default class Navigator extends React.Component {
                             return this.props.onSubmit(e)
                         } return
                     }}>Submit</a>
-                <a className={"button next"} 
+                <a className={"button next" + unlockedNextClass} 
                 onClick={(e) => {
                         if (unlockedNext) {
                             return this.props.onNext(e)

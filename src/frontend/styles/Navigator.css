@@ -6,7 +6,11 @@
 
 .unlocked {
     color: #08a6f0;
-    box-shadow: 0 9px 16px 0 #bae5fb;
+    /* box-shadow: 0 9px 16px 0 #bae5fb; */
+}
+
+.unlocked:hover {
+    cursor: pointer;
 }
 
 .navigator {
